@@ -35,10 +35,12 @@ nav a:hover,nav a.on{border-bottom-color:var(--red);color:var(--red)}
 /* hero */
 .hero{padding:56px 20px 48px;border-bottom:1px solid var(--hair);text-align:center}
 .hero .wrap{display:flex;flex-direction:column;align-items:center}
+.hero .eyebrow{text-align:center}
+.herocol{max-width:54ch;width:100%}
 .stamp{width:88px;height:88px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:1.4px;line-height:12px;color:var(--red);text-transform:uppercase;margin-bottom:22px;padding:8px}
 .eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;line-height:18px;text-transform:uppercase;margin:0 0 16px;color:var(--red)}
-h1{font-family:var(--display);font-weight:400;font-size:54px;line-height:1.05;letter-spacing:-.5px;margin:0 0 28px;max-width:18ch}
-.leads{max-width:54ch;margin:0 auto 8px;text-align:left}
+h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.12;letter-spacing:-.3px;margin:0 0 24px;max-width:54ch;text-align:left;text-wrap:balance}
+.leads{max-width:54ch;margin:0 0 8px;text-align:left}
 .lead{font-size:19px;line-height:30px;letter-spacing:.1px;margin:0 0 16px}
 .byline{font-family:var(--serif);font-size:12.73px;font-weight:700;line-height:28px;letter-spacing:.108px;color:var(--body)}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
@@ -86,7 +88,7 @@ footer a:hover{text-decoration:underline}
 footer .word{color:var(--on-primary);margin-bottom:16px}
 footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-height:16px;letter-spacing:0}
 @media (max-width:1023px){.tiles{grid-template-columns:repeat(3,1fr)}footer .wrap{grid-template-columns:1fr 1fr}}
-@media (max-width:767px){h1{font-size:40px;line-height:.95}.grid3,.tiles,footer .wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.row .t{font-size:22px;line-height:25px}.mast .wrap{align-items:center}}
+@media (max-width:767px){h1{font-size:32px;line-height:1.1}.grid3,.tiles,footer .wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.row .t{font-size:22px;line-height:25px}.mast .wrap{align-items:center}}
 </style>
 
 <header class="mast"><div class="wrap">
@@ -96,8 +98,8 @@ footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-hei
 
 <div class="hero" id="top"><div class="wrap">
   <p class="eyebrow">University of Cambridge · Department of Land Economy</p>
-  <h1>The built environment, time use, and subjective wellbeing</h1>
-  <div class="leads"><p class="lead">I am an Isaac Newton Trust Fellow and Senior Teaching Associate in the Department of Land Economy, University of Cambridge.</p><p class="lead">My research asks how the places people live in, and how they spend their time, shape how they feel. I work with longitudinal survey, time-use, and health-record data, using causal inference and machine learning.</p></div>
+  <div class="herocol"><h1>The built environment, time use, and subjective wellbeing</h1>
+  <div class="leads"><p class="lead">I am an Isaac Newton Trust Fellow and Senior Teaching Associate in the Department of Land Economy, University of Cambridge.</p><p class="lead">My research asks how the places people live in, and how they spend their time, shape how they feel. I work with longitudinal survey, time-use, and health-record data, using causal inference and machine learning.</p></div></div>
   <p class="byline">Fellow of Queens’ College · Director of Studies at St Edmund’s College and Lucy Cavendish College · Co-convenor of the Cambridge USA Centre<br>Fellow of the Higher Education Academy · ONS Accredited Researcher</p>
   <div class="btns"><a class="btn primary" href="#publications">Publication highlights</a><a class="btn" href="#cv">Curriculum vitae</a></div>
 </div></div>
