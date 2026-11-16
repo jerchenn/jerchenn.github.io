@@ -15,10 +15,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#000;--ink-soft:#1a1a1a;--body:#757575;--hair:#e0e0e0;--canvas:#fff;--canvas-soft:#f5f5f5;--link:#057dbc;--on-primary:#fff;
+:root{--ink:#1c1c1c;--ink-soft:#2a2a2a;--body:#6f6a62;--hair:#d9d1c2;--canvas:#f7f1e6;--canvas-soft:#efe7d8;--red:#c8322b;--red-deep:#a3261f;--link:#c8322b;--on-primary:#f7f1e6;
   --display:"Playfair Display","Times New Roman",Georgia,serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#000;--canvas:#fff}}
-:root[data-theme="dark"]{--ink:#000;--canvas:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#1c1c1c;--canvas:#f7f1e6}}
+:root[data-theme="dark"]{--ink:#1c1c1c;--canvas:#f7f1e6}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:24px;letter-spacing:.09px}
@@ -26,37 +26,44 @@ a{color:inherit;text-decoration:none}
 p a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 /* masthead */
-.mast{border-bottom:1px solid var(--ink);padding:12px 20px}
-.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mast{border-bottom:3px double var(--red);padding:18px 20px 12px}
+.mast .wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
 .word{font-family:var(--display);font-size:28px;letter-spacing:-.3px;line-height:1;text-transform:uppercase}
 nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.4px;line-height:18px;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent}
-nav a:hover,nav a.on{border-bottom-color:var(--ink)}
+nav a{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;line-height:18px;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{border-bottom-color:var(--red);color:var(--red)}
 /* hero */
-.hero{padding:48px 20px 40px;border-bottom:1px solid var(--hair)}
-.eyebrow{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.4px;line-height:18px;text-transform:uppercase;margin:0 0 16px}
-h1{font-family:var(--display);font-weight:400;font-size:64px;line-height:.93;letter-spacing:-.5px;margin:0 0 24px;max-width:17ch}
-.lead{font-size:19px;line-height:27.9px;letter-spacing:.108px;max-width:62ch;margin:0 0 20px}
+.hero{padding:56px 20px 48px;border-bottom:1px solid var(--hair);text-align:center}
+.hero .wrap{display:flex;flex-direction:column;align-items:center}
+.stamp{width:88px;height:88px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:1.4px;line-height:12px;color:var(--red);text-transform:uppercase;margin-bottom:22px;padding:8px}
+.eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;line-height:18px;text-transform:uppercase;margin:0 0 16px;color:var(--red)}
+h1{font-family:var(--display);font-weight:400;font-size:60px;line-height:1;letter-spacing:-.5px;margin:0 0 24px;max-width:18ch}
+.lead{font-size:19px;line-height:28px;letter-spacing:.1px;max-width:60ch;margin:0 auto 20px}
 .byline{font-family:var(--serif);font-size:12.73px;font-weight:700;line-height:28px;letter-spacing:.108px;color:var(--body)}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.btn{font-family:var(--sans);font-size:16px;font-weight:700;letter-spacing:.3px;line-height:20px;padding:12px 20px;border:1px solid var(--ink);background:var(--canvas);color:var(--ink);border-radius:0}
-.btn.primary{background:var(--ink);color:var(--on-primary)}
+.btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;line-height:20px;padding:12px 22px;border:1px solid var(--red);background:var(--canvas);color:var(--red);border-radius:0}
+.btn.primary{background:var(--red);color:var(--on-primary)}
+.btn:hover{background:var(--red-deep);color:var(--on-primary);border-color:var(--red-deep)}
+.btns{justify-content:center}
+.card .btn{font-size:11px;padding:9px 14px}
 /* sections */
 section{padding:40px 20px;border-bottom:1px solid var(--hair)}
-h2{font-family:var(--display);font-weight:400;font-size:32px;line-height:35px;letter-spacing:-.3px;margin:0 0 24px}
+h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:36px;letter-spacing:-.3px;margin:0 0 32px;text-align:center}
+h2::after{content:"";display:block;width:48px;height:2px;background:var(--red);margin:14px auto 0}
 h3{font-family:var(--sans);font-size:20px;font-weight:700;letter-spacing:-.28px;line-height:24px;margin:0 0 8px}
-h3.sub{font-size:14px;letter-spacing:.4px;text-transform:uppercase;margin:28px 0 4px}
+h3.sub{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin:28px 0 4px;color:var(--red)}
 h3.sub:first-of-type{margin-top:0}
 #cv .row .t{font-size:22px;line-height:26px}
 .grid3{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.card{background:var(--canvas-soft);border:1px solid var(--hair);padding:22px 22px 20px}
 .card p{margin:0;color:var(--ink-soft)}
 .card .eyebrow{margin-bottom:8px}
-.card .more{display:inline-block;margin-top:12px;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border-bottom:2px solid var(--ink)}
+.card .more{display:inline-block;margin-top:14px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red);border-bottom:2px solid var(--red)}
 /* rows */
 .rows{list-style:none;margin:0;padding:0}
 .row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--hair)}
 .row:last-child{border-bottom:0}
-.row .when{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.4px;line-height:18px;text-transform:uppercase;padding-top:5px}
+.row .when{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;line-height:18px;text-transform:uppercase;padding-top:6px;color:var(--red)}
 .row .t{font-family:var(--display);font-size:26px;line-height:28px;margin:0 0 6px}
 .row .t a:hover{text-decoration:underline;text-underline-offset:3px}
 .row .m{margin:0;color:var(--body);font-family:var(--serif)}
@@ -64,20 +71,21 @@ h3.sub:first-of-type{margin-top:0}
 .row .d{margin:6px 0 0;max-width:70ch}
 /* teaching cards: pastel tiles for the interactive pages */
 .tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:20px}
-.tile{display:block;padding:14px 12px;border:1px solid var(--ink);min-height:120px}
-.tile b{display:block;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
+.tile{display:block;padding:16px 14px;min-height:124px;border:1px solid rgba(0,0,0,.08)}
+.tile b{display:block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px;color:var(--red)}
 .tile span{font-family:var(--display);font-size:20px;line-height:22px}
-.tile:hover{background:var(--ink);color:var(--on-primary)}
+.tile:hover{outline:2px solid var(--red);outline-offset:-2px}
+.tile:nth-child(1){background:#f4dbb2}.tile:nth-child(2){background:#cbe3de}.tile:nth-child(3){background:#e3a6ac}.tile:nth-child(4){background:#edcbce}.tile:nth-child(5){background:#c3d1c4}.tile:nth-child(6){background:#d3c2c9}
 /* footer */
-footer{background:var(--ink);color:var(--on-primary);padding:48px 20px;font-family:var(--sans);font-size:14px;line-height:18px;letter-spacing:.4px}
+footer{background:var(--red);color:var(--on-primary);padding:48px 20px;font-family:var(--sans);font-size:14px;line-height:18px;letter-spacing:.4px}
 footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
 footer b{display:block;font-weight:700;text-transform:uppercase;margin-bottom:12px}
 footer a{display:block;margin-bottom:6px}
 footer a:hover{text-decoration:underline}
 footer .word{color:var(--on-primary);margin-bottom:16px}
-footer small{display:block;margin-top:24px;color:#a1a1a1;font-size:12px;line-height:16px;letter-spacing:0}
+footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-height:16px;letter-spacing:0}
 @media (max-width:1023px){.tiles{grid-template-columns:repeat(3,1fr)}footer .wrap{grid-template-columns:1fr 1fr}}
-@media (max-width:767px){h1{font-size:40px;line-height:.95}.grid3,.tiles,footer .wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.row .t{font-size:22px;line-height:25px}.mast .wrap{flex-direction:column;align-items:flex-start}}
+@media (max-width:767px){h1{font-size:40px;line-height:.95}.grid3,.tiles,footer .wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.row .t{font-size:22px;line-height:25px}.mast .wrap{align-items:center}}
 </style>
 
 <header class="mast"><div class="wrap">
@@ -86,6 +94,7 @@ footer small{display:block;margin-top:24px;color:#a1a1a1;font-size:12px;line-hei
 </div></header>
 
 <div class="hero" id="top"><div class="wrap">
+  <div class="stamp">Cambridge<br>Est. 2019</div>
   <p class="eyebrow">University of Cambridge · Department of Land Economy</p>
   <h1>The built environment, time use, and subjective wellbeing</h1>
   <p class="lead">I am an Isaac Newton Trust Fellow and Senior Teaching Associate in the Department of Land Economy at the University of Cambridge. My research asks how the places people live in, and the way they spend their time, shape how they feel, using longitudinal survey, time-use, and health-record data with causal inference and machine learning methods.</p>
@@ -97,7 +106,7 @@ footer small{display:block;margin-top:24px;color:#a1a1a1;font-size:12px;line-hei
   <h2>Research</h2>
   <div class="grid3">
     <div class="card"><p class="eyebrow">Causal inference</p><h3>Does where you live affect how you feel?</h3><p>Staggered difference-in-differences, synthetic control, and causal forests applied to Understanding Society panel data to estimate the effect of built-environment change on wellbeing.</p><a class="more" href="#pub-chil">Paper</a></div>
-    <div class="card"><p class="eyebrow">Planning and AI</p><h3>Evidence platforms for local planning</h3><p>Principal Investigator on two ai@cam projects: a planning-evidence platform with Greater Cambridge Shared Planning and a social-housing allocation dashboard with Camden Council.</p><a class="more" href="#contact">Enquire</a></div>
+    <div class="card"><p class="eyebrow">Planning and AI</p><h3>Evidence platforms for local planning</h3><p>Principal Investigator on two ai@cam projects: PLATO, a planning-evidence platform built with Greater Cambridge Shared Planning, and a social-housing allocation dashboard with Camden Council. PLATO is open to planners and researchers with an access code, available on request.</p><div class="btns" style="justify-content:flex-start;margin-top:16px"><a class="btn" href="https://platoplanning.org/">Visit PLATO</a><a class="btn primary mail" href="#contact" data-u="jc2205" data-d="cam.ac.uk" data-s="PLATO access code request">Request access code</a></div></div>
   </div>
 </div></section>
 
@@ -160,7 +169,7 @@ footer small{display:block;margin-top:24px;color:#a1a1a1;font-size:12px;line-hei
 
 <footer id="contact"><div class="wrap">
   <div><div class="word">Dr Jerry Chen</div>
-    <a href="#contact" id="mail" data-u="jc2205" data-d="cam.ac.uk">jc2205 at cam dot ac dot uk</a>
+    <a href="#contact" class="mail" data-u="jc2205" data-d="cam.ac.uk">jc2205 at cam dot ac dot uk</a>
     <span>Department of Land Economy, University of Cambridge, 19 Silver Street, Cambridge CB3 9EP, United Kingdom</span>
     <small>Site built from the author’s files. Course pages are for use within the University of Cambridge.</small></div>
   <div><b>On this site</b><a href="#research">Research</a><a href="#publications">Publication highlights</a><a href="#teaching">Teaching</a><a href="#cv">CV</a></div>
@@ -168,7 +177,7 @@ footer small{display:block;margin-top:24px;color:#a1a1a1;font-size:12px;line-hei
 </div></footer>
 
 <script>
-(function(){var m=document.getElementById('mail');m.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+m.dataset.u+'@'+m.dataset.d;});})();
+document.querySelectorAll('.mail').forEach(function(m){m.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+m.dataset.u+'@'+m.dataset.d+(m.dataset.s?'?subject='+encodeURIComponent(m.dataset.s):'');});});
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('nav a').forEach(x=>x.classList.remove('on'));a.classList.add('on');}));
 </script>
 </body>
