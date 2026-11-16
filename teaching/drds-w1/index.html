@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Dissertation, Research Design and Structure · Dr Jerry Chen</title>
+<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64.png?v=1">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=1">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1c1c;--ink-soft:#2a2a2a;--body:#6f6a62;--hair:#d9d1c2;--canvas:#f7f1e6;--canvas-soft:#efe7d8;--red:#c8322b;--red-deep:#a3261f;--link:#c8322b;--on-primary:#f7f1e6;
+  --display:"Playfair Display","Times New Roman",Georgia,serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#1c1c1c;--canvas:#f7f1e6}}
+:root[data-theme="dark"]{--ink:#1c1c1c;--canvas:#f7f1e6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:24px;letter-spacing:.09px}
+a{color:inherit;text-decoration:none}
+p a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* masthead */
+.mast{border-bottom:3px double var(--red);padding:18px 20px 12px}
+.mast .wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.word{font-family:var(--display);font-size:28px;letter-spacing:-.3px;line-height:1;text-transform:uppercase}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;line-height:18px;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{border-bottom-color:var(--red);color:var(--red)}
+/* hero */
+.hero{padding:56px 20px 48px;border-bottom:1px solid var(--hair)}
+.herogrid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+.herocol{max-width:60ch}
+.panel{border-top:2px solid var(--red);padding:14px 0 0;margin-top:4px}
+.panel .eyebrow{margin-bottom:6px}
+.portrait{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border:1px solid var(--hair);margin:0 0 20px}
+.stamp{width:88px;height:88px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:1.4px;line-height:12px;color:var(--red);text-transform:uppercase;margin-bottom:22px;padding:8px}
+.eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;line-height:18px;text-transform:uppercase;margin:0 0 16px;color:var(--red)}
+h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.12;letter-spacing:-.3px;margin:0 0 24px;max-width:54ch;text-align:left;text-wrap:balance}
+.leads{max-width:54ch;margin:0 0 8px;text-align:left}
+.lead{font-size:19px;line-height:30px;letter-spacing:.1px;margin:0 0 16px}
+.byline{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:15px;line-height:22px;color:var(--ink);white-space:nowrap}
+.byline li{padding:8px 0;border-bottom:1px solid var(--hair)}
+.byline li:last-child{border-bottom:0}
+@media (max-width:860px){.byline{white-space:normal}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;line-height:20px;padding:12px 22px;border:1px solid var(--red);background:var(--canvas);color:var(--red);border-radius:0}
+.btn.primary{background:var(--red);color:var(--on-primary)}
+.btn:hover{background:var(--red-deep);color:var(--on-primary);border-color:var(--red-deep)}
+.btns{justify-content:flex-start}
+.card .btn{font-size:11px;padding:9px 14px}
+/* sections */
+section{padding:40px 20px;border-bottom:1px solid var(--hair)}
+h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:36px;letter-spacing:-.3px;margin:0 0 32px;text-align:center}
+h2::after{content:"";display:block;width:48px;height:2px;background:var(--red);margin:14px auto 0}
+h3{font-family:var(--sans);font-size:20px;font-weight:700;letter-spacing:-.28px;line-height:24px;margin:0 0 8px}
+h3.sub{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin:28px 0 4px;color:var(--red)}
+h3.sub:first-of-type{margin-top:0}
+#cv .row .t{font-size:22px;line-height:26px}
+.grid3{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.card{background:var(--canvas-soft);border:1px solid var(--hair);padding:22px 22px 20px}
+.card p{margin:0;color:var(--ink-soft)}
+.card .eyebrow{margin-bottom:8px}
+.card .more{display:inline-block;margin-top:14px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red);border-bottom:2px solid var(--red)}
+/* rows */
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.row:last-child{border-bottom:0}
+.row .when{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;line-height:18px;text-transform:uppercase;padding-top:6px;color:var(--red)}
+.row .t{font-family:var(--display);font-size:26px;line-height:28px;margin:0 0 6px}
+.row .t a:hover{text-decoration:underline;text-underline-offset:3px}
+.row .m{margin:0;color:var(--body);font-family:var(--serif)}
+.row .m em{color:var(--ink-soft)}
+.row .d{margin:6px 0 0;max-width:70ch}
+/* teaching cards: pastel tiles for the interactive pages */
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:20px}
+.tiles1{grid-template-columns:repeat(6,1fr)}
+.tiles1 .tile{background:#d4dae1}
+.tile{display:block;padding:16px 14px;min-height:124px;border:1px solid rgba(0,0,0,.08)}
+.tile b{display:block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px;color:var(--red)}
+.tile span{font-family:var(--display);font-size:20px;line-height:22px}
+.tile:hover{outline:2px solid var(--red);outline-offset:-2px}
+.tile:nth-child(1){background:#f4dbb2}.tile:nth-child(2){background:#cbe3de}.tile:nth-child(3){background:#e3a6ac}.tile:nth-child(4){background:#edcbce}.tile:nth-child(5){background:#c3d1c4}.tile:nth-child(6){background:#d3c2c9}
+/* footer */
+footer{background:var(--red);color:var(--on-primary);padding:48px 20px;font-family:var(--sans);font-size:14px;line-height:18px;letter-spacing:.4px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+footer b{display:block;font-weight:700;text-transform:uppercase;margin-bottom:12px}
+footer a{display:block;margin-bottom:6px}
+footer a:hover{text-decoration:underline}
+footer .word{color:var(--on-primary);margin-bottom:16px}
+footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-height:16px;letter-spacing:0}
+@media (max-width:1023px){.tiles{grid-template-columns:repeat(3,1fr)}footer .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.herogrid{grid-template-columns:1fr;gap:28px}}
+@media (max-width:767px){h1{font-size:32px;line-height:1.1}.grid3,.tiles,footer .wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.row .t{font-size:22px;line-height:25px}.mast .wrap{align-items:center}}
+
+/* lecture page */
+.lec-head{padding:56px 20px 40px;border-bottom:1px solid var(--hair);text-align:center}
+.lec-head h1{margin:0 auto 16px;text-align:center}
+.lec-head .reading{color:var(--body);max-width:60ch;margin:0 auto}
+.slide{padding:40px 20px;border-bottom:1px solid var(--hair);scroll-margin-top:12px}
+.slide .wrap{max-width:980px}
+.slide .meta{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.slide .num{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.6px;color:var(--on-primary);background:var(--red);padding:3px 8px}
+.slide .eb{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--red)}
+.slide h2{text-align:left;margin:0 0 20px}
+.slide h2::after{margin:12px 0 0}
+.slide .sub{color:var(--body);margin:0 0 20px;max-width:75ch}
+.slide .leadline{font-family:var(--display);font-size:24px;line-height:32px;max-width:60ch;margin:0 0 20px;border-left:3px solid var(--red);padding-left:16px}
+.slide .note{margin:20px 0 0;max-width:75ch;font-style:italic;color:var(--ink-soft)}
+.cards{display:grid;gap:16px;margin:4px 0 4px}
+.cards.c2{grid-template-columns:1fr 1fr}.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards .card h3{font-family:var(--sans);font-size:16px;line-height:22px;margin:0 0 10px;color:var(--ink)}
+.cards .card{border-top:3px solid var(--red)}
+.cards .cn{display:block;font-family:var(--display);font-size:22px;color:var(--red);margin-bottom:4px}
+.cards .card p{margin:0 0 10px}.cards .card p.foot{color:var(--body);font-style:italic;margin:0}
+blockquote{margin:0 0 8px;padding:6px 0 6px 20px;border-left:3px solid var(--red);max-width:70ch}
+blockquote p{font-family:var(--display);font-size:24px;line-height:33px;margin:0 0 8px}
+blockquote cite{display:block;font-style:normal;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red)}
+figure{margin:8px 0 0}
+figure img{display:block;max-width:100%;max-height:560px;border:1px solid var(--hair);background:#fff}
+figcaption{font-size:14px;color:var(--body);margin-top:8px;max-width:75ch}
+.portrait{max-width:240px}
+.split{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
+.split img{width:100%;border:1px solid var(--hair)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.duo img{width:100%;max-height:none}
+.tlist{max-width:760px}
+.tlist .th,.pairs .th{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--red);padding:6px 0;border-bottom:2px solid var(--red)}
+.tlist .tr{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--hair)}
+.tlist .ti{font-family:var(--display);color:var(--red);font-size:20px}
+.pairs{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;max-width:880px}
+.pairs p{margin:0;padding:12px 0;border-bottom:1px solid var(--hair)}
+.tablewrap{overflow-x:auto;max-width:100%}
+.st{border-collapse:collapse;width:100%;max-width:980px;font-size:16px}
+.st th{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red);text-align:left;padding:8px 10px 8px 0;border-bottom:2px solid var(--red)}
+.st td{padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.st td:first-child{color:var(--red);white-space:nowrap}
+.backlink{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red)}
+@media (max-width:767px){.cards.c2,.cards.c3,.split,.duo,.pairs{grid-template-columns:1fr}.slide h2{font-size:28px;line-height:32px}}
+</style>
+<header class="mast"><div class="wrap"><a class="word" href="/">Dr Jerry Chen</a><nav><a href="/#teaching">Teaching</a><a href="/#publications">Publications</a><a href="/#cv">CV</a></nav></div></header>
+<div class="lec-head"><div class="wrap"><p class="eyebrow">DRDS · Michaelmas · Week 1 · Introduction, dissertation planning and research ethics</p><h1>Dissertation, Research Design and Structure</h1><p class="reading">Dr Jerry Chen · Department of Land Economy · University of Cambridge</p></div></div>
+<section class="slide" id="s03"><div class="wrap"><div class="meta"><span class="num">03</span><span class="eb">Week 1</span></div><h2>Introduce yourself</h2>
+<p class="sub">Your name, your course, and choose one of three rapid fire questions.</p>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>Where you&#x27;re from</h3><p>A town, a city, a country? Or it’s complicated, so next question.</p></div><div class="card"><span class="cn">II</span><h3>Your favourite spot in Cambridge</h3><p>A cafe, a shop, a library, or a running route? New to town and not sure, next!</p></div><div class="card"><span class="cn">III</span><h3>A book you&#x27;d recommend</h3><p>Any book you enjoyed reading or re-reading?</p></div></div>
+</div></section>
+<section class="slide" id="s04"><div class="wrap"><div class="meta"><span class="num">04</span><span class="eb">Week 1</span></div><h2>Two questions run through this session</h2>
+<div class="pairs"><div class="th">What makes a question worth a year?</div><div class="th">What makes an answer worth believing?</div><p>Finding a problem that can be clearly defined</p><p>Every dataset arrives already shaped</p><p>Asking one key question, not four</p><p>Published does not mean true</p><p>A method that could prove the argument wrong</p><p>Citing only what has actually been read</p><p>A structure where every section earns its pages</p><p>What the University counts as misconduct</p><p>Planning for the bottleneck</p><p>Declaring the tools used, including the new ones</p></div>
+</div></section>
+<section class="slide" id="s05"><div class="wrap"><div class="meta"><span class="num">05</span><span class="eb">The module</span></div><h2>Most important resource: MPhil handbook</h2>
+<div class="tablewrap"><table class="st"><tr><th>Four key dates</th><th></th></tr><tr><td>Provisional title + 200-word outline</td><td>Mon 9 Nov 2026</td></tr><tr><td>Final proposal, c. 2,000 words</td><td>Mon 3 May 2027</td></tr><tr><td>Confirmed title, no changes after</td><td>Mon 17 May 2027</td></tr><tr><td>Dissertation submission, 12 noon</td><td>Mon 12 Jul 2027</td></tr></table></div>
+<p class="note">10,000–12,000 words of main text, excluding bibliography, cover page and declaration. Land Economy Research: 18,000–20,000 words.</p>
+</div></section>
+<section class="slide" id="s06"><div class="wrap"><div class="meta"><span class="num">06</span><span class="eb">The module</span></div><h2>DRDS schedule</h2>
+<div class="tablewrap"><table class="st"><tr><th>Week</th><th>Date</th><th>Session</th><th>Lecturer</th></tr><tr><td>Week 1</td><td>9 Oct</td><td>Introduction, planning and research ethics</td><td>today</td></tr><tr><td>Week 2</td><td>16 Oct</td><td>Designing and structuring a research project</td><td>Daniel Chrisendo</td></tr><tr><td>Week 3–4</td><td>23, 30 Oct</td><td>Course streams: REF, EP and PGR</td><td>times and rooms differ</td></tr><tr><td>Week 5</td><td>6 Nov</td><td>Legal research methods · second PGR session</td><td>Andrea Peripoli · Kelvin MacDonald</td></tr><tr><td>Week 6</td><td>13 Nov</td><td>Quantitative research methods</td><td>Jerry Chen</td></tr><tr><td>Week 7</td><td>20 Nov</td><td>Qualitative research methods</td><td>Stefania Fiorentino</td></tr><tr><td>Week 8</td><td>27 Nov</td><td>Review, outlook and presentation skills</td><td>Andreas Kontoleon</td></tr></table></div>
+</div></section>
+<section class="slide" id="s07"><div class="wrap"><div class="meta"><span class="num">07</span><span class="eb">The module</span></div><h2>Weeks 3 to 5</h2>
+<div class="cards c3"><div class="card"><h3>REF</h3><p>Weeks 3 and 4. Friday 23 and 30 October, 9.00 – 11.00, Pembroke Auditorium.</p><p class="foot">Daniel Ruf</p></div><div class="card"><h3>EP</h3><p>Weeks 3 and 4. Friday 23 and 30 October, 11.00 – 13.00, McCrum Lecture Theatre.</p><p class="foot">Andreas Kontoleon and Lovleen Bhullar</p></div><div class="card"><h3>PGR</h3><p>Weeks 3 and 5. Friday 23 October, 14.00 – 16.00, McCrum. Friday 6 November, 9.00 – 11.00, Pembroke.</p><p class="foot">Stefania Fiorentino and Kelvin MacDonald</p></div></div>
+</div></section>
+<section class="slide" id="s08"><div class="wrap"><div class="meta"><span class="num">08</span><span class="eb">The module</span></div><h2>Five minutes with the handbook</h2>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>Key due dates</h3><p>Different across courses. Put them in your calendar before you leave this room, and plan your time well.</p><p class="foot">pages 30 and 33</p></div><div class="card"><span class="cn">II</span><h3>DRDS</h3><p>What the module requires, how the dissertation is assessed, and what weight it carries.</p><p class="foot">page 31</p></div><div class="card"><span class="cn">III</span><h3>Plagiarism</h3><p>The definition, and the declaration signed on submission. We come back to this after the break.</p><p class="foot">pages 37 to 39</p></div></div>
+</div></section>
+<section class="slide" id="s09"><div class="wrap"><div class="meta"><span class="num">09</span><span class="eb">Asking</span></div><h2>Why dedicate a year of your life to this?</h2>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>Why Land Economy?</h3><p>Interdisciplinarity is an important feature of our department, how do you take advantage of the areas of expertise available?</p></div><div class="card"><span class="cn">II</span><h3>Interesting topic area?</h3><p>What questions motivated you to pursue an MPhil? These do not have to be your potential dissertation topic, but they are a good starting point.</p></div><div class="card"><span class="cn">III</span><h3>Why should others care?</h3><p>Who benefits from the improved understanding? Important to start thinking about impact-making early. Helps with design of study.</p></div></div>
+</div></section>
+<section class="slide" id="s10"><div class="wrap"><div class="meta"><span class="num">10</span><span class="eb">Asking</span></div><h2>Structuring your process (it is iterative)</h2>
+<p class="sub">Prior knowledge is most relevant to the first three.</p>
+<div class="tlist"><div class="th">Process</div><div class="tr"><span class="ti">1</span><span>Research problem</span></div><div class="tr"><span class="ti">2</span><span>Research question</span></div><div class="tr"><span class="ti">3</span><span>Research design</span></div><div class="tr"><span class="ti">4</span><span>Methods and models</span></div><div class="tr"><span class="ti">5</span><span>Data and evidence</span></div><div class="tr"><span class="ti">6</span><span>Analysis</span></div><div class="tr"><span class="ti">7</span><span>Interpretation</span></div></div>
+<p class="note">The research question is revised during the work, not fixed at the start.</p>
+</div></section>
+<section class="slide" id="s11"><div class="wrap"><div class="meta"><span class="num">11</span><span class="eb">Asking</span></div><h2>Three approaches (third is under-utilised)</h2>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>Start from a problem</h3><p>Depart from some societal issue, broadly interpreted, that interests you and that you think is amenable to your skill set.</p><p class="foot">Risk: loving the subject, not the question</p></div><div class="card"><span class="cn">II</span><h3>Start from a literature</h3><p>Find one or two articles that you really like, as close as possible to what you want to do. In what ways can you add to this literature?</p><p class="foot">Risk: inheriting question and blind spots</p></div><div class="card"><span class="cn">III</span><h3>Start from a method or a dataset</h3><p>Begin with a skill worth acquiring, or access already in hand. Then find the question that deserves it. Underused here.</p><p class="foot">Risk: a technique in search of a purpose</p></div></div>
+</div></section>
+<section class="slide" id="s12"><div class="wrap"><div class="meta"><span class="num">12</span><span class="eb">Asking</span></div><h2>Answering one fundamental question</h2>
+<div class="cards c2"><div class="card"><h3>What causes Y?</h3><p>A research area</p></div><div class="card"><h3>Does X cause Y?</h3><p>A research question</p></div></div>
+<div class="tlist"><div class="th">Sharpness</div><div class="tr"><span class="ti">1</span><span>Good research questions are sharp. They guide the structure of the dissertation, and push you to think in a stringent, theoretically informed way.</span></div><div class="tr"><span class="ti">2</span><span>Do not underestimate the power of such sharpness. Questions of this type enforce delineation.</span></div><div class="tr"><span class="ti">3</span><span>The best dissertations ask one, and exactly one, research question. The common failure I see in marking is four half-answered questions in twelve thousand words.</span></div></div>
+</div></section>
+<section class="slide" id="s13"><div class="wrap"><div class="meta"><span class="num">13</span><span class="eb">Asking</span></div><h2>Sharpening curiosity into a research question</h2>
+<div class="tablewrap"><table class="st"><tr><th>Topic</th><th>Question</th><th>What is compared</th></tr><tr><td>Dynamic electricity pricing</td><td>At what level of consumption does switching to a time-varying tariff break even?</td><td>Households that can shift demand, against those that cannot (EV + heat pump).</td></tr><tr><td>A renewable energy levy</td><td>Which households bore the largest share of the levy cost?</td><td>The same income groups before and after levy enforced.</td></tr></table></div>
+</div></section>
+<section class="slide" id="s14"><div class="wrap"><div class="meta"><span class="num">14</span><span class="eb">Designing</span></div><h2>The right method lights up the way</h2>
+<div class="cards c2"><div class="card"><h3>Set out the process before starting</h3><p>How will information be captured and cleaned? How will it be analysed? How will the results be interpreted?</p></div><div class="card"><h3>Then attack it before anyone else does</h3><p>What could go wrong in this process? What is the answer when it does? Can causality be reached at all, and if so how?</p></div></div>
+<p class="leadline">In social sciences, we almost never have an experiment.</p>
+<p class="note">So the honest question is not whether the design is perfect. It is what can be claimed given the design in hand, and whether the text says so rather than hoping nobody asks.</p>
+</div></section>
+<section class="slide" id="s15"><div class="wrap"><div class="meta"><span class="num">15</span><span class="eb">Structuring</span></div><h2>Dissertation structure</h2>
+<div class="tablewrap"><table class="st"><tr><th>Section</th><th>Extent</th><th>What it should do</th></tr><tr><td>Introduction</td><td>c. 2 pages</td><td>What do we know, what don&#x27;t we know, and what are you going to do about it? Most importantly: why should we care?</td></tr><tr><td>Literature review</td><td>keep it short, c. 20%</td><td>What is the state of research in this area?</td></tr><tr><td>Data</td><td></td><td>What are the sources of data? How did you obtain them? Be transparent.</td></tr><tr><td>Method and design</td><td></td><td>Consistent with theoretical stance. What are possible problems in the process, and what are the solutions?</td></tr><tr><td>Results</td><td></td><td>Are the results economically significant?</td></tr><tr><td>Discussion</td><td></td><td>What it means, what it does not mean, and what cannot be ruled out.</td></tr><tr><td>Conclusion</td><td>c. 1 page</td><td>The answer to the one question, and what would come next.</td></tr></table></div>
+</div></section>
+<section class="slide" id="s16"><div class="wrap"><div class="meta"><span class="num">16</span><span class="eb">Doing</span></div><h2>Plan for the bottleneck</h2>
+<div class="cards c3"><div class="card"><h3>Stages</h3><p>What are the stages? How long does each take? Which depend on each other? Where are the delays?</p><p class="foot">Then add half again.</p></div><div class="card"><h3>Resources</h3><p>Literature and materials. Software and equipment. Data acquisition. Travel, costs, working time.</p><p class="foot">Available, and available when?</p></div><div class="card"><h3>The long poles</h3><p>Ethics approval. Data access agreements. Recruiting interviewees. Anything needing a reply.</p><p class="foot">On other people&#x27;s calendars.</p></div></div>
+<p class="note">Nobody has ever regretted starting too early.</p>
+</div></section>
+<section class="slide" id="s18"><div class="wrap"><div class="meta"><span class="num">18</span><span class="eb">Believing</span></div><h2>Dataset arrives already shaped</h2>
+<div class="cards c2"><div class="card"><h3>Choices made before the data arrived</h3><p>Who collected the data and for what purpose? From a survey, and analysed for selection bias? Who has the rights over it? Can we gain access, and how long?</p><p class="foot">All data must be treated.</p></div><div class="card"><h3>Choices still to be made</h3><p>Which data do we include, and which outliers? Which variables do we include? Which questions do we ask interview subjects? Which results do we actually present?</p><p class="foot">Countless choices and tradeoffs.</p></div></div>
+<p class="note">Selective use can appear as deliberate falsification. Document your steps, argue for your chosen path, and be transparent.</p>
+</div></section>
+<section class="slide" id="s19"><div class="wrap"><div class="meta"><span class="num">19</span><span class="eb">Believing</span></div><h2>Published does not mean true</h2>
+<div class="cards c3"><div class="card"><h3>Publication bias</h3><p>The fact that journals like to publish interesting results creates a publication bias.</p><p class="foot">A biased sample of the research done.</p></div><div class="card"><h3>Selective reporting</h3><p>The prevalence of the replication crisis probably means that at the very least, selective publication has been common.</p><p class="foot">Only the specifications that worked.</p></div><div class="card"><h3>p-hacking</h3><p>Masicampo and Lalande (2012) found that p-values just under .05 are overrepresented in all top psychology journals.</p><p class="foot">Strong incidental evidence that p-hacking is common.</p></div></div>
+<p class="note">Be careful even when reading published work. This is not a reason for cynicism, and it is certainly not a reason to dismiss an unwelcome finding. It is a reason to ask of every paper cited: what would I need to see to believe this?</p>
+</div></section>
+<section class="slide" id="s20"><div class="wrap"><div class="meta"><span class="num">20</span><span class="eb">Believing</span></div><h2>Citation as a record of reading</h2>
+<div class="tablewrap"><table class="st"><tr><th>Practice</th><th>Caution</th></tr><tr><td>Only refer to things that you have read. If Jones (2019) says that Marshall (1890) writes at length about knowledge spillovers, go to the original source.</td><td>Never go in search of references after the claim. The argument should come from the reading.</td></tr><tr><td>This advice goes for the classics too. If Jones says Marshall was the first to talk about the urban wage premium, try to assess that statement.</td><td>If you cite something as consensus, it had better be. One paper in agreement is not a field in agreement.</td></tr><tr><td>Accurately represent the view of the cited work. Including where it is more equivocal than you would like.</td><td>Do not overcite or build reference walls. Six citations after a sentence usually means none was load-bearing.</td></tr></table></div>
+<p class="note">Generally, do not cite common knowledge, but this discussion is difficult. In this department it differs between a lawyer, an economist and a planner.</p>
+</div></section>
+<section class="slide" id="s21"><div class="wrap"><div class="meta"><span class="num">21</span><span class="eb">Believing</span></div><h2>Reference management with Zotero</h2>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>The Word plug-in</h3><p>Zotero ships with a plug-in for Microsoft Word. It adds references directly to a paper as it is being written. Add/Edit Citation starts one.</p></div><div class="card"><span class="cn">II</span><h3>The browser connector</h3><p>The connector for Chrome or Firefox also installs a Zotero menu for Google Docs, so citations can be added there while writing/brainstorming.</p></div><div class="card"><span class="cn">III</span><h3>A record at the point of reading</h3><p>The reference is captured when the work is read. It does not make it acceptable to cite work that has not been read.</p></div></div>
+</div></section>
+<section class="slide" id="s22"><div class="wrap"><div class="meta"><span class="num">22</span><span class="eb">Integrity</span></div><h2>Draw the line and err on the side of caution</h2>
+<div class="tablewrap"><table class="st"><tr><td>Plagiarism</td><td>using someone else&#x27;s ideas, words, data or material without acknowledgement</td></tr><tr><td>Self-plagiarism</td><td>reusing your own previously assessed or published work without acknowledgement</td></tr><tr><td>Contract cheating</td><td>contracting a third party to produce work submitted as your own</td></tr><tr><td>Collusion</td><td>using the ideas or words of joint work without acknowledgement, in either direction</td></tr><tr><td>Impersonation</td><td>sitting an examination as someone else, or arranging for someone to sit yours</td></tr><tr><td>Fabrication or falsification</td><td>of data, results, outputs, documentation or participant consent</td></tr><tr><td>Failure of obligations</td><td>legal, ethical and professional, including failing to follow agreed protocol</td></tr></table></div>
+<p class="note">Gaining, attempting to gain, or helping others gain an unfair academic advantage in formal University assessment — or any activity likely to undermine the integrity essential to scholarship and research. plagiarism.admin.cam.ac.uk · definition</p>
+</div></section>
+<section class="slide" id="s23"><div class="wrap"><div class="meta"><span class="num">23</span><span class="eb">Integrity</span></div><h2>Permitted and prohibited AI use</h2>
+<p class="sub">Five minutes to read the latest Departmental AI policy, what is your key takeaway?</p>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>The rule</h3><p>“A student using any unacknowledged content generated by artificial intelligence within a summative assessment as though it is their own work constitutes academic misconduct, unless explicitly stated otherwise in the assessment brief.”</p></div><div class="card"><span class="cn">II</span><h3>The guide</h3><p>Thirty activities with guidance. Pending committee approval, so it may change. Use of GenAI without declaration is not permitted. Many uses are permitted with declaration where work is submitted for examination or feedback.</p></div><div class="card"><span class="cn">III</span><h3>Prohibited in the guide</h3><p>The policy&#x27;s prohibited list includes asking a tool to reword your own text, and translating your own writing. Generating text is prohibited unless an assessment explicitly asks for it. So are interrogating your ideas, expanding your reasoning, and interpreting images.</p></div></div>
+<p class="note">If unsure whether a tool or application is allowed, ask the Student Business Office, pgadmin@landecon.cam.ac.uk</p>
+</div></section>
+<section class="slide" id="s24"><div class="wrap"><div class="meta"><span class="num">24</span><span class="eb">Integrity</span></div><h2>Declaring AI use is essential</h2>
+<p class="sub">A declaration is required where work is submitted for examination or feedback.</p>
+<div class="cards c3"><div class="card"><span class="cn">I</span><h3>This deck</h3><p>Prepared with AI assistance: slide layout, migration from last year&#x27;s version, and checking of information against the handbook, the DRDS schedule and the departmental AI policy.</p><p class="foot">Voluntary: the policy&#x27;s rule applies to submitted work.</p></div><div class="card"><span class="cn">II</span><h3>Contents of a declaration</h3><p>The tool used, the activity it was used for as listed in the policy&#x27;s table, what it produced, and what was done with the output. Declared at submission in the form the assessment specifies.</p><p class="foot">Use of GenAI without declaration is not permitted.</p></div><div class="card"><span class="cn">III</span><h3>Limits of a declaration</h3><p>Declaration applies to permitted activities. It does not lift a prohibition. Rewording your own text, translating it, and generating text remain prohibited whether or not they are declared.</p><p class="foot">In doubt, the fundamental rule takes precedence.</p></div></div>
+</div></section>
+<section class="slide" id="s25"><div class="wrap"><div class="meta"><span class="num">25</span><span class="eb">Integrity</span></div><h2>Ethics review (more on this next week)</h2>
+<div class="cards c2"><div class="card"><h3>Ask early, even if the answer is no</h3><p>Consider ethical issues before you start. Human subjects, personal data, fieldwork. Consult your supervisor.</p></div><div class="card"><h3>Where to look</h3><p>See the flowchart at: cshss.cam.ac.uk · ethicsflowchart_0.pdf. A Research Ethics Committee answers questions. cshss.cam.ac.uk/research-ethics-approval</p></div></div>
+<p class="leadline">Your dissertation will be part of our dissertation library. That means it will be around for a long time.</p>
+<p class="note">Some scientific discoveries present moral dilemmas. That does not mean we should shy away from controversy, but that we have to be careful, stringent and thoughtful.</p>
+</div></section>
+<section class="slide" id="s26"><div class="wrap"><div class="meta"><span class="num">26</span><span class="eb">Week 1</span></div><h2>Nobody regrets starting too early</h2>
+<div class="tlist"><div class="th">To take away</div><div class="tr"><span class="ti">1</span><span>Think big, and read, read, read, but remember that there are constraints, most notably time and skills.</span></div><div class="tr"><span class="ti">2</span><span>Research involves many ethical judgments.</span></div><div class="tr"><span class="ti">3</span><span>Conduct and report your research in an accurate and honest way.</span></div><div class="tr"><span class="ti">4</span><span>The ultimate scarce good is attention.</span></div><div class="tr"><span class="ti">5</span><span>Enjoy the journey, but get to the airport early.</span></div></div>
+<p class="note">Task: find the one or two papers you wish you had written, and bring them to Week 2.</p>
+</div></section>
+<footer><div class="wrap" style="display:block"><a class="backlink" href="/#teaching" style="color:var(--on-primary)">Back to Teaching</a><small>The attendance QR codes from the slides are not reproduced on this page.</small><small>Dr Jerry Chen · Department of Land Economy, University of Cambridge</small></div></footer>
+<script>
+(function(){ const b=[...document.querySelectorAll('.slide')]; const cur=()=>{let k=0,d=1e9;b.forEach((x,i)=>{const t=Math.abs(x.getBoundingClientRect().top-12);if(t<d){d=t;k=i;}});return k;};
+ const go=i=>{i=Math.max(0,Math.min(b.length-1,i));b[i].scrollIntoView({behavior:'smooth',block:'start'});};
+ document.addEventListener('keydown',e=>{ if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();go(cur()+1);} else if(e.key==='ArrowUp'||e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(cur()-1);} }); })();
+</script>
+</body>
+</html>
