@@ -34,18 +34,19 @@ nav a{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6p
 nav a:hover,nav a.on{border-bottom-color:var(--red);color:var(--red)}
 /* hero */
 .hero{padding:56px 20px 48px;border-bottom:1px solid var(--hair)}
-.herogrid{display:grid;grid-template-columns:3fr 2fr;gap:48px;align-items:start}
+.herogrid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
 .herocol{max-width:60ch}
-.panel{background:var(--canvas-soft);border:1px solid var(--hair);padding:22px 24px 18px;margin-top:6px}
-.panel .eyebrow{margin-bottom:12px}
+.panel{border-top:2px solid var(--red);padding:14px 0 0;margin-top:4px}
+.panel .eyebrow{margin-bottom:6px}
 .stamp{width:88px;height:88px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:1.4px;line-height:12px;color:var(--red);text-transform:uppercase;margin-bottom:22px;padding:8px}
 .eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;line-height:18px;text-transform:uppercase;margin:0 0 16px;color:var(--red)}
 h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.12;letter-spacing:-.3px;margin:0 0 24px;max-width:54ch;text-align:left;text-wrap:balance}
 .leads{max-width:54ch;margin:0 0 8px;text-align:left}
 .lead{font-size:19px;line-height:30px;letter-spacing:.1px;margin:0 0 16px}
-.byline{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:16px;line-height:24px;color:var(--ink)}
-.byline li{padding:7px 0;border-bottom:1px solid var(--hair)}
+.byline{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:15px;line-height:22px;color:var(--ink);white-space:nowrap}
+.byline li{padding:8px 0;border-bottom:1px solid var(--hair)}
 .byline li:last-child{border-bottom:0}
+@media (max-width:860px){.byline{white-space:normal}}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;line-height:20px;padding:12px 22px;border:1px solid var(--red);background:var(--canvas);color:var(--red);border-radius:0}
 .btn.primary{background:var(--red);color:var(--on-primary)}
