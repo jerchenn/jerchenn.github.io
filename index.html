@@ -38,6 +38,7 @@ nav a:hover,nav a.on{border-bottom-color:var(--red);color:var(--red)}
 .herocol{max-width:60ch}
 .panel{border-top:2px solid var(--red);padding:14px 0 0;margin-top:4px}
 .panel .eyebrow{margin-bottom:6px}
+.portrait{display:block;width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--hair);margin:0 0 20px}
 .stamp{width:88px;height:88px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:1.4px;line-height:12px;color:var(--red);text-transform:uppercase;margin-bottom:22px;padding:8px}
 .eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.8px;line-height:18px;text-transform:uppercase;margin:0 0 16px;color:var(--red)}
 h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.12;letter-spacing:-.3px;margin:0 0 24px;max-width:54ch;text-align:left;text-wrap:balance}
@@ -100,7 +101,7 @@ footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-hei
 
 <header class="mast"><div class="wrap">
   <a class="word" href="#top">Dr Jerry Chen</a>
-  <nav><a href="#research" class="on">Research</a><a href="#publications">Publication highlights</a><a href="#teaching">Teaching</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#research" class="on">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <div class="hero" id="top"><div class="wrap herogrid">
@@ -108,9 +109,10 @@ footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-hei
     <p class="eyebrow">University of Cambridge · Department of Land Economy</p>
     <h1>The built environment, time use, and subjective wellbeing</h1>
     <div class="leads"><p class="lead">I am an economist interested in spatial inequality and urban planning. I hold an Isaac Newton Trust Fellowship in the Department of Land Economy, University of Cambridge, where I am a Senior Teaching Associate.</p><p class="lead">My research asks how the places people live in, and how they spend their time, shape how they feel. I work with longitudinal survey, time-use, and health-record data, using causal inference and machine learning.</p></div>
-    <div class="btns"><a class="btn primary" href="#publications">Publication highlights</a><a class="btn" href="#cv">Curriculum vitae</a></div>
+    <div class="btns"><a class="btn primary" href="#publications">Publications</a><a class="btn" href="#cv">Curriculum vitae</a></div>
   </div>
   <aside class="panel">
+    <img class="portrait" src="img/portrait.webp" alt="Dr Jerry Chen">
     <p class="eyebrow">Affiliations</p>
     <ul class="byline"><li>Fellow of Queens’ College</li><li>Director of Studies, St Edmund’s College</li><li>Director of Studies, Lucy Cavendish College</li><li>Member of Queens’ Campaign Board</li><li>Co-convenor, Cambridge USA Centre</li><li>Fellow of the Higher Education Academy</li><li>ONS Accredited Researcher</li></ul>
   </aside>
@@ -125,7 +127,7 @@ footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-hei
 </div></section>
 
 <section id="publications"><div class="wrap">
-  <h2>Publication highlights</h2>
+  <h2>Publications</h2>
   <ul class="rows">
     <li class="row"><div class="when">2026</div><div><p class="t"><a href="https://doi.org/10.1016/j.rspp.2026.100364">Local informal institutions and subjective wellbeing: an empirical assessment across spatial scales in the United Kingdom</a></p><p class="m">with Martin Andersson and Johan P. Larsson · <em>Regional Science Policy &amp; Practice</em>, in press</p></div></li>
     <li class="row" id="pub-chil"><div class="when">2026</div><div><p class="t"><a href="https://proceedings.mlr.press/v333/chen26b.html">Does where you live affect how you feel? Causal evidence from an integrated econometric and machine learning framework</a></p><p class="m"><em>Proceedings of Machine Learning Research</em>, Conference on Health, Inference, and Learning</p></div></li>
@@ -186,7 +188,7 @@ footer small{display:block;margin-top:24px;color:#f3d6d2;font-size:12px;line-hei
     <a href="#contact" class="mail" data-u="jc2205" data-d="cam.ac.uk">jc2205 at cam dot ac dot uk</a>
     <span>Department of Land Economy, University of Cambridge, 19 Silver Street, Cambridge CB3 9EP, United Kingdom</span>
     <small>Course pages are for use within the University of Cambridge.</small></div>
-  <div><b>On this site</b><a href="#research">Research</a><a href="#publications">Publication highlights</a><a href="#teaching">Teaching</a><a href="#cv">CV</a></div>
+  <div><b>On this site</b><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#cv">CV</a></div>
   <div><b>Elsewhere</b><a href="https://www.landecon.cam.ac.uk/person/dr-jerry-chen">Department of Land Economy profile</a><a href="https://www.ai.cam.ac.uk/people/jerry-chen/">ai@cam</a><a href="https://www.queens.cam.ac.uk/">Queens’ College</a><a href="https://www.st-edmunds.cam.ac.uk/">St Edmund’s College</a><a href="https://www.lucy.cam.ac.uk/">Lucy Cavendish College</a><a href="https://jerchenn.github.io/drds/">DRDS lecture site</a><a href="https://scholar.google.com/citations?user=2U6nCQQAAAAJ">Google Scholar</a><a href="https://www.researchgate.net/profile/Jerry_Chen33">ResearchGate</a><a href="https://www.linkedin.com/in/jchenn/">LinkedIn</a></div>
 </div></footer>
 
